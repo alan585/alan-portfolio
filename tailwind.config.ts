@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        primary: ["var(--font-jetBrainsMono)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
