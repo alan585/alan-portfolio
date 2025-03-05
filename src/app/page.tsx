@@ -22,7 +22,7 @@ export default function Home() {
               applications.
             </p>
           </div>
-          <div className="mb-8">
+          <div className="mb-8 xl:mb-0">
             <Photo />
           </div>
         </div>
