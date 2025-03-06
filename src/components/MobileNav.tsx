@@ -26,13 +26,13 @@ const socialLinks = [
   {
     id: 1,
     title: "Github",
-    url: "https://github.com/Alan-Port",
+    url: "https://github.com/alan585",
     icon: <FaGithub />,
   },
   {
     id: 2,
     title: "LinkedIn",
-    url: "https://www.linkedin.com/in/alan-port/",
+    url: "https://www.linkedin.com/in/alan-alvarado-camacho-786123175/",
     icon: <FaLinkedinIn />,
   },
   {
@@ -80,6 +80,8 @@ const MobileNav = () => {
         <div className="flex items-center justify-center gap-4">
           {socialLinks.map((link) => (
             <Link
+              rel="noopener noreferrer"
+              target="_blank"
               key={link.id}
               href={link.url}
               className="flex h-8 w-8 items-center justify-center rounded-full border border-accent text-accent duration-500 hover:bg-accent hover:text-primary hover:transition-all"
