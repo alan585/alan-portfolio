@@ -6,8 +6,8 @@ import { FaGithub, FaLinkedinIn, FaFileAlt } from "react-icons/fa";
 
 const links = [
   { id: 1, title: "Home", url: "/" },
-  { id: 2, title: "About", url: "/about" },
-  { id: 3, title: "Services", url: "/services" },
+  { id: 2, title: "Services", url: "/services" },
+  { id: 3, title: "About", url: "/about" },
   { id: 4, title: "Work", url: "/work" },
   { id: 5, title: "Contact", url: "/contact" },
 ];

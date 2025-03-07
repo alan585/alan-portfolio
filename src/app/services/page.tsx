@@ -1,35 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
-const services = [
-  {
-    num: "01",
-    title: "Web Development",
-    description:
-      "I build responsive, high-performing websites tailored to your needs, using the latest technologies for a seamless user experience.",
-  },
-  {
-    num: "02",
-    title: "UI/UX Design",
-    description:
-      "I create intuitive, visually appealing interfaces that enhance user engagement and improve overall usability.",
-    href: "",
-  },
-  {
-    num: "03",
-    title: "Database Management",
-    description:
-      "I design and optimize databases for efficiency, security, and scalability to ensure smooth data handling.",
-    href: "",
-  },
-  {
-    num: "04",
-    title: "SEO",
-    description:
-      "I implement strategies to boost your website’s search engine ranking, increasing visibility and organic traffic.",
-    href: "",
-  },
-];
+import { services } from "@/constants";
 
 const Services = () => {
   return (

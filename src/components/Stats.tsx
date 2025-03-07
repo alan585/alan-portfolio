@@ -1,21 +1,7 @@
 "use client";
 
 import CountUp from "react-countup";
-
-const stats = [
-  {
-    num: 1,
-    text: "Year of experience",
-  },
-  {
-    num: 8,
-    text: "Technologies mastered",
-  },
-  {
-    num: 300,
-    text: "Code commits",
-  },
-];
+import { stats } from "@/constants";
 
 const Stats = () => {
   return (

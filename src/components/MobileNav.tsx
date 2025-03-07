@@ -4,7 +4,7 @@ import { CiMenuFries } from "react-icons/ci";
 import Link from "next/link";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { usePathname } from "next/navigation";
-import { FaGithub, FaLinkedinIn, FaFileAlt } from "react-icons/fa";
+import { socialLinks } from "@/constants";
 import {
   Sheet,
   SheetContent,
@@ -16,31 +16,10 @@ import {
 
 const links = [
   { id: 1, title: "Home", url: "/" },
-  { id: 2, title: "About", url: "/about" },
-  { id: 3, title: "Services", url: "/services" },
+  { id: 2, title: "Services", url: "/services" },
+  { id: 3, title: "About", url: "/about" },
   { id: 4, title: "Work", url: "/work" },
   { id: 5, title: "Contact", url: "/contact" },
-];
-
-const socialLinks = [
-  {
-    id: 1,
-    title: "Github",
-    url: "https://github.com/alan585",
-    icon: <FaGithub />,
-  },
-  {
-    id: 2,
-    title: "LinkedIn",
-    url: "https://www.linkedin.com/in/alan-alvarado-camacho-786123175/",
-    icon: <FaLinkedinIn />,
-  },
-  {
-    id: 3,
-    title: "Resume",
-    url: "/resume.pdf",
-    icon: <FaFileAlt />,
-  },
 ];
 
 const MobileNav = () => {
