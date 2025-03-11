@@ -3,6 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
+import Cursor from "@/components/Cursor";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetBrainsMono",
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${jetBrainsMono.variable} antialiased`}>
         <Header />
+        <Cursor />
         <PageTransition>{children}</PageTransition>
       </body>
     </html>
