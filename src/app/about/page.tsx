@@ -1,15 +1,10 @@
 "use client";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { about, experience, education, skills } from "@/constants";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import Card from "@/components/Card";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import SkillCard from "@/components/SkillCard";
 
 const About = () => {
   const [tab, setTab] = useState("experience");
@@ -110,22 +105,11 @@ const About = () => {
                 <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => {
                     return (
-                      <motion.div whileHover={{ scale: 1.1 }} key={index}>
-                        <li key={index}>
-                          <TooltipProvider delayDuration={100}>
-                            <Tooltip>
-                              <TooltipTrigger className="group flex h-[150px] w-full items-center justify-center rounded-xl bg-[#232329] bg-opacity-50">
-                                <div className="text-6xl transition-all duration-300 group-hover:text-accent">
-                                  {skill.icon}
-                                </div>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p className="capitalize">{skill.name}</p>
-                              </TooltipContent>
-                            </Tooltip>
-                          </TooltipProvider>
-                        </li>
-                      </motion.div>
+                      <SkillCard
+                        key={index}
+                        icon={skill.icon}
+                        name={skill.name}
+                      />
                     );
                   })}
                 </ul>
