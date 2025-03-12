@@ -23,9 +23,10 @@ export default {
     fontFamily: {
       primary: "var(--font-jetBrainsMono)",
     },
+    /* #101521 */
     extend: {
       colors: {
-        primary: "#101521",
+        primary: "#0a0d14",
         accent: {
           DEFAULT: "#77B1D4",
           hover: "#517891",

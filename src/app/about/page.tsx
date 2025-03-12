@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/tooltip";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 const About = () => {
   const [tab, setTab] = useState("experience");
@@ -27,7 +26,7 @@ const About = () => {
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
-          className="flex flex-col items-center gap-[60px] xl:flex-row xl:items-start"
+          className="flex flex-col items-center gap-[20px] xl:flex-row xl:items-start"
         >
           <TabsList className="mb-24 flex w-full max-w-[300px] flex-col gap-6 pt-[125px] text-white/60 xl:mx-10">
             {tabs.map((item, index) => (
@@ -58,14 +57,12 @@ const About = () => {
                 <p className="mx-auto max-w-[600px] text-white/60 xl:mx-0">
                   {experience.description}
                 </p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
-                    {experience.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl bg-[#232329] px-10 py-6 lg:items-start"
-                        >
+
+                <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
+                  {experience.items.map((item, index) => {
+                    return (
+                      <motion.div key={index} whileHover={{ scale: 1.05 }}>
+                        <li className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl bg-[#232329] bg-opacity-40 px-10 py-6 lg:items-start">
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="min-h-[60px] max-w-[260px] text-center text-xl lg:text-left">
                             {item.position}
@@ -76,10 +73,10 @@ const About = () => {
                             <p className="text-white/60">{item.company}</p>
                           </div>
                         </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
+                      </motion.div>
+                    );
+                  })}
+                </ul>
               </div>
             </TabsContent>
 
@@ -90,13 +87,13 @@ const About = () => {
                 <p className="mx-auto max-w-[600px] text-white/60 xl:mx-0">
                   {education.description}
                 </p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
-                    {education.items.map((item, index) => {
-                      return (
+                <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
+                  {education.items.map((item, index) => {
+                    return (
+                      <motion.div whileHover={{ scale: 1.05 }} key={index}>
                         <li
                           key={index}
-                          className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl bg-[#232329] px-10 py-6 lg:items-start"
+                          className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl bg-[#232329] bg-opacity-40 px-10 py-6 lg:items-start"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="min-h-[60px] max-w-[260px] text-center text-xl lg:text-left">
@@ -108,10 +105,10 @@ const About = () => {
                             <p className="text-white/60">{item.institution}</p>
                           </div>
                         </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
+                      </motion.div>
+                    );
+                  })}
+                </ul>
               </div>
             </TabsContent>
 
@@ -127,20 +124,22 @@ const About = () => {
                 <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => {
                     return (
-                      <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="group flex h-[150px] w-full items-center justify-center rounded-xl bg-[#232329]">
-                              <div className="text-6xl transition-all duration-300 group-hover:text-accent">
-                                {skill.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="capitalize">{skill.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
+                      <motion.div whileHover={{ scale: 1.1 }} key={index}>
+                        <li key={index}>
+                          <TooltipProvider delayDuration={100}>
+                            <Tooltip>
+                              <TooltipTrigger className="group flex h-[150px] w-full items-center justify-center rounded-xl bg-[#232329] bg-opacity-50">
+                                <div className="text-6xl transition-all duration-300 group-hover:text-accent">
+                                  {skill.icon}
+                                </div>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p className="capitalize">{skill.name}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        </li>
+                      </motion.div>
                     );
                   })}
                 </ul>
