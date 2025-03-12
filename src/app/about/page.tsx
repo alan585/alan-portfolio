@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 import SkillCard from "@/components/SkillCard";
 
 const About = () => {
-  const [tab, setTab] = useState("experience");
-  const tabs = ["experience", "education", "skills", "about me"];
+  const [tab, setTab] = useState("about me");
+  const tabs = ["about me", "experience", "education", "skills"];
 
   return (
     <motion.div
@@ -21,7 +21,7 @@ const About = () => {
     >
       <div className="container mx-auto">
         <Tabs
-          defaultValue="experience"
+          defaultValue="about me"
           className="flex flex-col items-center gap-[20px] xl:flex-row xl:items-start"
         >
           <TabsList className="mb-24 flex w-full max-w-[300px] flex-col gap-6 pt-[125px] text-white/60 xl:mx-10">
@@ -46,6 +46,32 @@ const About = () => {
 
           {/* content */}
           <div className="min-h-[70vh] w-full">
+            {/* about */}
+            <TabsContent
+              value="about me"
+              className="w-full text-center xl:text-left"
+            >
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="mx-auto max-w-[600px] text-white/60 xl:mx-0">
+                  {about.description}
+                </p>
+                <ul className="mx-auto grid max-w-[620px] grid-cols-1 gap-y-6 xl:mx-0 xl:grid-cols-2">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center gap-4 xl:justify-start"
+                      >
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-xl">{item.fieldValue}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </TabsContent>
+
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -110,32 +136,6 @@ const About = () => {
                         icon={skill.icon}
                         name={skill.name}
                       />
-                    );
-                  })}
-                </ul>
-              </div>
-            </TabsContent>
-
-            {/* about */}
-            <TabsContent
-              value="about me"
-              className="w-full text-center xl:text-left"
-            >
-              <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="mx-auto max-w-[600px] text-white/60 xl:mx-0">
-                  {about.description}
-                </p>
-                <ul className="mx-auto grid max-w-[620px] grid-cols-1 gap-y-6 xl:mx-0 xl:grid-cols-2">
-                  {about.info.map((item, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className="flex items-center justify-center gap-4 xl:justify-start"
-                      >
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
-                      </li>
                     );
                   })}
                 </ul>
