@@ -13,8 +13,7 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 // about data
 const about = {
   title: "About me",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  description: "Here's a little about myself, and what I'm passionate about.",
   info: [
     {
       fieldName: "Name",
@@ -37,60 +36,64 @@ const about = {
 
 // experience data
 const experience = {
-  icon: "/assets/resume/badge.svg",
   title: "My experience",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  description: "Here are a few of the places I've worked.",
   items: [
     {
-      company: "Tech Solutions Inc.",
       position: "Full Stack Developer",
+      company: "Tech Solutions Inc.",
       duration: "2022 - Present",
+      description: "Working on a project",
     },
     {
-      company: "Web Design Studio",
       position: "Front-End Developer Intern",
+      company: "Web Design Studio",
       duration: "Summer 2021",
+      description: "Working on a project",
     },
     {
-      company: "E-commerce Startup",
       position: "Freelance Web Developer",
+      company: "E-commerce Startup",
       duration: "2020 - 2021",
+      description: "Working on a project",
     },
     {
-      company: "Tech Academy",
       position: "Teaching Assistant",
+      company: "Tech Academy",
       duration: "2019 - 2020",
+      description: "Working on a project",
     },
   ],
 };
 
 // education data
 const education = {
-  icon: "/assets/resume/cap.svg",
   title: "My education",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  description: "Here is a little about my educational background.",
   items: [
     {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development Bootcamp",
       duration: "2023",
+      degree: "Full Stack Web Development Bootcamp",
+      institution: "Online Course Platform",
+      description: "Working on a project",
     },
     {
-      institution: "Codecademy",
-      degree: "Front-end Track",
       duration: "2022",
+      degree: "Front-end Track",
+      institution: "Codecademy",
+      description: "Working on a project",
     },
     {
-      institution: "Online Course",
-      degree: "Programming Course",
       duration: "2020 - 2021",
+      degree: "Programming Course",
+      institution: "Online Course",
+      description: "Working on a project",
     },
     {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
       duration: "2019",
+      degree: "Certified Web Developer",
+      institution: "Tech Institute",
+      description: "Working on a project",
     },
   ],
 };
@@ -98,8 +101,7 @@ const education = {
 // skills data
 const skills = {
   title: "My skills",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  description: "This is what I have been working with recently.",
   skillList: [
     {
       icon: <FaHtml5 />,

@@ -7,6 +7,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Card from "@/components/Card";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -61,19 +62,13 @@ const About = () => {
                 <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
                   {experience.items.map((item, index) => {
                     return (
-                      <motion.div key={index} whileHover={{ scale: 1.05 }}>
-                        <li className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl bg-[#232329] bg-opacity-40 px-10 py-6 lg:items-start">
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="min-h-[60px] max-w-[260px] text-center text-xl lg:text-left">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="h-[6px] w-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
-                          </div>
-                        </li>
-                      </motion.div>
+                      <Card
+                        key={index}
+                        date={item.duration}
+                        title={item.position}
+                        subtitle={item.company}
+                        description={item.description}
+                      ></Card>
                     );
                   })}
                 </ul>
@@ -90,22 +85,13 @@ const About = () => {
                 <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
                   {education.items.map((item, index) => {
                     return (
-                      <motion.div whileHover={{ scale: 1.05 }} key={index}>
-                        <li
-                          key={index}
-                          className="flex h-[184px] flex-col items-center justify-center gap-1 rounded-xl bg-[#232329] bg-opacity-40 px-10 py-6 lg:items-start"
-                        >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="min-h-[60px] max-w-[260px] text-center text-xl lg:text-left">
-                            {item.degree}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="h-[6px] w-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.institution}</p>
-                          </div>
-                        </li>
-                      </motion.div>
+                      <Card
+                        key={index}
+                        date={item.duration}
+                        title={item.degree}
+                        subtitle={item.institution}
+                        description={item.description}
+                      ></Card>
                     );
                   })}
                 </ul>
