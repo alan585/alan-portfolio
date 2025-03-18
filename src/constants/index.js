@@ -1,4 +1,3 @@
-import { FaGithub, FaLinkedinIn, FaFileAlt } from "react-icons/fa";
 import {
   FaHtml5,
   FaCss3,
@@ -10,8 +9,12 @@ import {
   FaJava,
   FaLinux,
   FaShopify,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedinIn,
+  FaFileAlt,
 } from "react-icons/fa";
-
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 // about data
@@ -260,6 +263,19 @@ const projects = [
   },
 ];
 
+const info = [
+  {
+    icon: <FaPhoneAlt />,
+    title: "Phone",
+    description: "(+40) 321 654 876",
+  },
+  {
+    icon: <FaEnvelope />,
+    title: "Email",
+    description: "youremail@gmail.com",
+  },
+];
+
 export {
   about,
   experience,
@@ -269,4 +285,5 @@ export {
   stats,
   services,
   projects,
+  info,
 };
