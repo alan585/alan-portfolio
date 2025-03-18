@@ -21,7 +21,7 @@ const About = () => {
     >
       <div className="container mx-auto">
         <Tabs
-          defaultValue="experience"
+          defaultValue="about me"
           className="flex flex-col gap-[60px] xl:flex-row"
         >
           <TabsList className="mx-auto mb-24 flex w-full max-w-[300px] flex-col gap-6 pt-[125px] text-white/60 xl:mx-10">

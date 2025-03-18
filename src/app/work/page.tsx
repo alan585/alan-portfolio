@@ -32,7 +32,7 @@ const Work = () => {
       className="flex min-h-[80vh] flex-col"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col py-12 xl:flex-row xl:gap-12 xl:pt-40">
+        <div className="flex flex-col py-12 xl:flex-row xl:gap-12 xl:pt-32">
           <div className="order-1 flex flex-col gap-6 xl:order-none">
             <h1 className="text-outline text-8xl font-extrabold text-transparent">
               {project.num}
