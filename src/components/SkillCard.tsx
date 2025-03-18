@@ -34,7 +34,7 @@ const SkillCard = ({ icon, name }: { icon: JSX.Element; name: string }) => {
       <li>
         <TooltipProvider delayDuration={100}>
           <Tooltip>
-            <TooltipTrigger className="group flex h-[150px] w-full items-center justify-center rounded-xl bg-[#232329] bg-opacity-50 hover:shadow-xl">
+            <TooltipTrigger className="group flex h-[140px] w-full items-center justify-center rounded-xl bg-[#232329] bg-opacity-50 hover:shadow-xl">
               <div className="text-6xl transition-all duration-300 group-hover:text-accent">
                 {icon}
               </div>

@@ -21,10 +21,10 @@ const About = () => {
     >
       <div className="container mx-auto">
         <Tabs
-          defaultValue="about me"
-          className="flex flex-col items-center gap-[20px] xl:flex-row xl:items-start"
+          defaultValue="experience"
+          className="flex flex-col gap-[60px] xl:flex-row"
         >
-          <TabsList className="mb-24 flex w-full max-w-[300px] flex-col gap-6 pt-[125px] text-white/60 xl:mx-10">
+          <TabsList className="mx-auto mb-24 flex w-full max-w-[300px] flex-col gap-6 pt-[125px] text-white/60 xl:mx-10">
             {tabs.map((item, index) => (
               <div
                 key={index}
@@ -124,7 +124,7 @@ const About = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="mx-auto max-w-[600px] text-white/60 xl:mx-0">
+                  <p className="mx-auto max-w-[500px] text-white/60 xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
