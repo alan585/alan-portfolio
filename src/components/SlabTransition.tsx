@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 // components
 import Slab from "./Slab";
 
-const StairTransition = () => {
+const SlabTransition = () => {
   const pathname = usePathname();
   return (
     <>
@@ -30,4 +30,4 @@ const StairTransition = () => {
   );
 };
 
-export default StairTransition;
+export default SlabTransition;
