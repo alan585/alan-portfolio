@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import Cursor from "@/components/Cursor";
+import SlabTransition from "@/components/SlabTransition";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetBrainsMono",
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${jetBrainsMono.variable} antialiased`}>
         <Header />
+        <SlabTransition />
         <Cursor />
         <PageTransition>{children}</PageTransition>
       </body>

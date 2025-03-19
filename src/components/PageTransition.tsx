@@ -14,7 +14,11 @@ const PageTransition = ({
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
         exit={{ opacity: 0 }}
-        transition={{ delay: 1, duration: 0.6, ease: "easeInOut" }}
+        transition={{
+          delay: 1.4,
+          duration: 0.6,
+          ease: "easeInOut",
+        }}
         className="pointer-events-none fixed top-0 h-screen w-screen bg-primary"
       />
     </AnimatePresence>

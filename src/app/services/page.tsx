@@ -11,7 +11,7 @@ const Services = () => {
           animate={{
             opacity: 1,
             transition: {
-              delay: 1.4,
+              delay: 1.8,
               duration: 0.4,
               ease: "easeIn",
             },
